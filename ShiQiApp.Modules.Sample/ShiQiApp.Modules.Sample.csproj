@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0-windows</TargetFramework>
+	  <Nullable>enable</Nullable>
+	  <UseWPF>true</UseWPF>
+	  <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShiQiApp.Core\ShiQiApp.Core.csproj" />
+  </ItemGroup>
+
+	<!-- 👇 关键：构建后自动复制到主程序的 Modules 文件夹 -->
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="if not exist &quot;$(SolutionDir)ShiQiApp\bin\$(Configuration)\$(TargetFramework)\Modules&quot; mkdir &quot;$(SolutionDir)ShiQiApp\bin\$(Configuration)\$(TargetFramework)\Modules&quot;" />
+		<Exec Command="xcopy /Y /Q &quot;$(TargetPath)&quot; &quot;$(SolutionDir)ShiQiApp\bin\$(Configuration)\$(TargetFramework)\Modules\&quot;" />		
+	</Target>
+
+
+</Project>

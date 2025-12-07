@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Styles/Primitives/Colors.xaml" />
+        <ResourceDictionary Source="/Styles/Primitives/Fonts.xaml" />
+        <ResourceDictionary Source="/Styles/Controls/Window.xaml" />
+        <ResourceDictionary Source="/Styles/Controls/Button.xaml" />
+        <ResourceDictionary Source="/Styles/Controls/ListBoxItem.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

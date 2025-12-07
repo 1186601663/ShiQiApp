@@ -1,0 +1,19 @@
+﻿<Application x:Class="ShiQiApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:ShiQiApp.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- 引入 HandyControl 默认皮肤 -->
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                <!-- 引入自定义主题 -->
+                <ResourceDictionary Source="/Styles/Themes/DefaultTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisConverter"/>
+            <converters:BoolToWidthConverter x:Key="BoolToWidthConverter"/>
+            <converters:ExpandCollapseConverter x:Key="ExpandCollapseConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

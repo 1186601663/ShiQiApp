@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="ShiQiApp.Modules.Sample.SampleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Margin="10">
+    <Border Background="AliceBlue" Padding="20" CornerRadius="8">
+        <StackPanel>
+            <TextBlock Text="🎉 Sample Module Loaded!" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="{Binding AppName}" Margin="0,8"/>
+            <Button Content="Click Me!" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Border>
+</UserControl>

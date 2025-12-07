@@ -1,0 +1,12 @@
+<!-- 
+  统一 .NET 8 + WPF 配置
+  所有项目自动继承此设置
+-->
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+</Project>
